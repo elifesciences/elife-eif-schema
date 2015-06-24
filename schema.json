@@ -247,11 +247,17 @@
                   {
                     "type": "null"
                   }
-                ],
-                "TODO": "shouldn't be present instead of null?"
+                ]
               },
               "institution": {
-                "type": "string"
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "city": {
                 "oneOf": [
@@ -261,18 +267,26 @@
                   {
                     "type": "null"
                   }
-                ],
-                "TODO": "shouldn't be present instead of null? maybe always present?"
+                ]
               },
               "country": {
-                "type": "string"
-              }
+                "oneOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "TODO": "these shouldn't be present instead of null?"
             },
             "additionalProperties": false,
-            "required": [
-              "institution",
-              "city",
-              "country"
+            "anyOf": [
+              {"required": ["dept"]},
+              {"required": ["institution"]},
+              {"required": ["city"]},
+              {"required": ["country"]}
             ]
           }
         },
