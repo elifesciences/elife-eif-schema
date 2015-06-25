@@ -1,5 +1,12 @@
 {
   "name": "elife-eif-schema",
   "private": true,
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "dependencies": {
+    "is-my-json-valid": "^2.12",
+    "nomnom": "^1.5"
+  },
+  "bin": {
+    "elife-eif-schema": "validator.js"
+  }
 }
