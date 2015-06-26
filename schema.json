@@ -237,57 +237,7 @@
         "affiliation": {
           "type": "object",
           "additionalProperties": {
-            "type": "object",
-            "properties": {
-              "dept": {
-                "oneOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "institution": {
-                "oneOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "city": {
-                "oneOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "country": {
-                "oneOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "null"
-                  }
-                ]
-              },
-              "TODO": "these shouldn't be present instead of null?"
-            },
-            "additionalProperties": false,
-            "anyOf": [
-              {"required": ["dept"]},
-              {"required": ["institution"]},
-              {"required": ["city"]},
-              {"required": ["country"]}
-            ]
+            "$ref": "#/definitions/affiliation"
           }
         },
         "related-object": {
@@ -390,6 +340,59 @@
     "status"
   ],
   "definitions": {
+    "affiliation": {
+      "type": "object",
+      "properties": {
+        "dept": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "institution": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "city": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "country": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "TODO": "these shouldn't be present instead of null?"
+      },
+      "additionalProperties": false,
+      "anyOf": [
+        {"required": ["dept"]},
+        {"required": ["institution"]},
+        {"required": ["city"]},
+        {"required": ["country"]}
+      ]
+    },
     "contributor": {
       "oneOf": [
         {
@@ -452,17 +455,7 @@
             },
             "affiliations": {
               "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "institution": {
-                    "type": "string"
-                  },
-                  "city": {
-                    "type": "string"
-                  }
-                }
-              }
+              "items": {"$ref": "#/definitions/affiliation"}
             },
             "references": {
               "type": "object",
