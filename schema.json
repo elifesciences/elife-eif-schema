@@ -89,10 +89,7 @@
           }
         }
       },
-      "additionalProperties": false,
-      "required": [
-        "display-channel"
-      ]
+      "additionalProperties": false
     },
     "keywords": {
       "type": "object",
