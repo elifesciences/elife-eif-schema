@@ -30,7 +30,18 @@ function main(args) {
 }
 
 function validate(source) {
-    var json = JSON.parse(source);
+    try {
+        var json = JSON.parse(source);
+    } catch (e) {
+        console.log([
+            {
+                "field": "data",
+                "message": "invalid JSON",
+                "value": source
+            }
+        ]);
+        process.exit(1);
+    }
     var validate = validator('schema.json', {verbose: true});
 
     validate(json);
