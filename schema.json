@@ -632,9 +632,38 @@
                 "boxed-text",
                 "fig",
                 "media",
-                "sub-article",
                 "supplementary-material",
                 "table-wrap"
+              ],
+              "TODO": "accept all but sub-article?"
+            },
+            "title": {
+              "type": "string"
+            },
+            "doi": {
+              "$ref": "#/definitions/doi"
+            },
+            "path": {
+              "$ref": "#/definitions/path"
+            },
+            "fragments": {
+              "type": "array",
+              "items": {"$ref": "#/definitions/fragment"}
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "doi",
+            "path"
+          ],
+          "TODO": "only abstract can not have a title?"
+        },
+        {
+          "properties": {
+            "type": {
+              "enum": [
+                "sub-article"
               ]
             },
             "title": {
@@ -660,8 +689,7 @@
             "type",
             "doi",
             "path"
-          ],
-          "TODO": "only abstract can not have a title?"
+          ]
         }
       ]
     },
