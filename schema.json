@@ -122,9 +122,10 @@
         "properties": {
           "type": {
             "enum": [
+              "article-reference",
               "commentary",
               "commentary-article",
-              "article-reference"
+              "corrected-article"
             ]
           },
           "href": {
