@@ -251,6 +251,20 @@
             "type": "object",
             "TODO": "what is this?"
           }
+        },
+        "foot-note": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
         }
       },
       "additionalProperties": false
@@ -512,6 +526,12 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "foot-note": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               },
               "additionalProperties": false
@@ -602,6 +622,13 @@
                   "default": []
                 },
                 "related-object": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "default": []
+                },
+                "foot-note": {
                   "type": "array",
                   "items": {
                     "type": "string"
