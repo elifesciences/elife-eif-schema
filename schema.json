@@ -29,6 +29,10 @@
       "pattern": "^[0-9]+$",
       "TODO": "should be: integer, minimum 1"
     },
+    "elocation-id": {
+      "type": "string",
+      "pattern": "^e[0-9]{5}$"
+    },
     "article-id": {
       "type": "string"
     },
@@ -351,6 +355,7 @@
     "version",
     "doi",
     "volume",
+    "elocation-id",
     "article-id",
     "article-version-id",
     "pub-date",
