@@ -33,13 +33,13 @@ function validate(source) {
     try {
         var json = JSON.parse(source);
     } catch (e) {
-        console.log([
+        console.log(JSON.stringify([
             {
                 "field": "data",
                 "message": "invalid JSON",
                 "value": source
             }
-        ]);
+        ]));
         process.exit(1);
     }
     var validate = validator('schema.json', {verbose: true});
