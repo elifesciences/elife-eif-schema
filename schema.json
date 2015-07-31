@@ -646,6 +646,24 @@
           "required": [
             "type"
           ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "enum": [
+                "on-behalf-of"
+              ]
+            },
+            "on-behalf-of": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "on-behalf-of"
+          ]
         }
       ]
     },
