@@ -406,6 +406,16 @@
             }
           ]
         },
+        "email": {
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "TODO": "these shouldn't be present instead of null?"
       },
       "additionalProperties": false,
@@ -413,7 +423,8 @@
         {"required": ["dept"]},
         {"required": ["institution"]},
         {"required": ["city"]},
-        {"required": ["country"]}
+        {"required": ["country"]},
+        {"required": ["email"]}
       ]
     },
     "contributor": {
