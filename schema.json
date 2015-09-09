@@ -487,6 +487,9 @@
             "role": {
               "type": "string"
             },
+            "email": {
+              "type": "string"
+            },
             "affiliations": {
               "type": "array",
               "items": {"$ref": "#/definitions/affiliation"}
