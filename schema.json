@@ -587,6 +587,10 @@
             "collab": {
               "type": "string"
             },
+            "affiliations": {
+              "type": "array",
+              "items": {"$ref": "#/definitions/affiliation"}
+            },
             "references": {
               "type": "object",
               "properties": {
