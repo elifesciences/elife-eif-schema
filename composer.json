@@ -1,0 +1,14 @@
+{
+  "name": "elife/elife-eif-schema",
+  "type": "library",
+  "require": {
+    "php": ">=5.5",
+    "symfony/process": "~2.7"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.7"
+  },
+  "config": {
+    "bin-dir": "./bin"
+  }
+}

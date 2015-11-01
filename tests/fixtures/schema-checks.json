@@ -1,0 +1,38 @@
+[
+  {
+    "description": "an article title",
+    "tests": [
+      {
+        "description": "validates with a title",
+        "data": {
+          "title": "Article title",
+          "version": "1",
+          "doi": "10.7554/eLife.00001",
+          "volume": "1",
+          "elocation-id": "e00001",
+          "article-id": "10.7554/eLife.00001",
+          "article-version-id": "00001.1",
+          "pub-date": "2015-20-31",
+          "path": "content/1/e00001",
+          "article-type": "research-article",
+          "status": "VOR",
+          "publish": "1"
+        },
+        "valid": true
+      },
+      {
+        "description": "fails validation without a title",
+        "data": {
+        },
+        "valid": false
+      },
+      {
+        "description": "fails validation when the title is not a string",
+        "data": {
+          "title": null
+        },
+        "valid": false
+      }
+    ]
+  }
+]
