@@ -10,24 +10,19 @@
       "type": "string"
     },
     "version": {
-      "type": "string",
-      "pattern": "^[0-9]+$",
-      "TODO": "should be: integer, minimum 1"
+      "type": "integer",
+      "minimum": 1
     },
     "doi": {
       "$ref": "#/definitions/doi"
     },
     "publish": {
-      "enum": [
-        "0",
-        "1"
-      ],
-      "TODO": "should be: boolean"
+      "type": "boolean",
+      "default": false
     },
     "volume": {
-      "type": "string",
-      "pattern": "^[0-9]+$",
-      "TODO": "should be: integer, minimum 1"
+      "type": "integer",
+      "minimum": 1
     },
     "elocation-id": {
       "type": "string",
@@ -41,13 +36,11 @@
     },
     "pub-date": {
       "type": "string",
-      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
-      "TODO": "should be format date-time"
+      "format": "date-time"
     },
     "update": {
       "type": "string",
-      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
-      "TODO": "should be format date-time"
+      "format": "date-time"
     },
     "path": {
       "$ref": "#/definitions/path"
@@ -69,12 +62,8 @@
       ]
     },
     "force": {
-      "enum": [
-        "0",
-        "1"
-      ],
-      "default": "0",
-      "TODO": "should be: boolean"
+      "type": "boolean",
+      "default": false
     },
     "categories": {
       "type": "object",
@@ -441,20 +430,12 @@
               ]
             },
             "equal-contrib": {
-              "enum": [
-                "no",
-                "yes"
-              ],
-              "default": "no",
-              "TODO": "should be: boolean"
+              "type": "boolean",
+              "default": false
             },
             "corresp": {
-              "enum": [
-                "no",
-                "yes"
-              ],
-              "default": "no",
-              "TODO": "should be: boolean"
+              "type": "boolean",
+              "default": false
             },
             "id": {
               "type": "string"
@@ -463,12 +444,8 @@
               "type": "string"
             },
             "deceased": {
-              "enum": [
-                "no",
-                "yes"
-              ],
-              "default": "no",
-              "TODO": "should be: boolean"
+              "type": "boolean",
+              "default": false
             },
             "surname": {
               "type": "string"
@@ -571,12 +548,8 @@
               ]
             },
             "corresp": {
-              "enum": [
-                "no",
-                "yes"
-              ],
-              "default": "no",
-              "TODO": "should be: boolean"
+              "type": "boolean",
+              "default": false
             },
             "id": {
               "type": "string"
