@@ -535,8 +535,7 @@
           "additionalProperties": false,
           "required": [
             "type",
-            "surname",
-            "given-names"
+            "surname"
           ]
         },
         {
