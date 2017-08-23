@@ -1,0 +1,23 @@
+language: php
+
+php:
+  - 5.6
+
+## Run on container environment
+sudo: false
+
+## Cache composer bits
+cache:
+  directories:
+    - bin
+    - node_modules
+    - vendor
+    - $HOME/.composer/cache
+
+install:
+  - travis_retry npm install
+  - travis_retry composer self-update && composer --version
+  - travis_retry composer install --prefer-dist --no-interaction
+
+script:
+  - ./bin/phpunit
