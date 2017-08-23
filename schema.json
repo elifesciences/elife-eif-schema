@@ -459,7 +459,7 @@
             "orcid": {
               "type": "string",
               "format": "uri",
-              "pattern": "^http://orcid.org/"
+              "pattern": "^https?://orcid.org/"
             },
             "role": {
               "type": "string"
